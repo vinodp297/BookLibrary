@@ -1,9 +1,8 @@
-namespace BookLibraryManager.Models
-{
+namespace BookLibraryManager.Models;
+
     public class ErrorViewModel
     {
         public string? RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
-}
