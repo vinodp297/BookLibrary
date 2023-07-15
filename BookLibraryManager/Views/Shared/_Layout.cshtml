@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Book Library Manager</title>
     <link rel="stylesheet" href="~/css/BootwatchTheme.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="~/BookLibraryManager.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -19,30 +20,31 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
-@*                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        @*                        <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Categories</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
+@*                    <form class="d-flex">
                         <input class="form-control me-sm-2" type="search" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                    </form>*@
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Book Library Manager -
+            &copy; 2023 - Book Library Manager 
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
