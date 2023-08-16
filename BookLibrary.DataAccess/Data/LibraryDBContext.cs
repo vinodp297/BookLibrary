@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 
-namespace BookLibraryManager.Data
+namespace BookLibraryManager.DataAccess.Data
 {
     public class LibraryDBContext : DbContext
     {
